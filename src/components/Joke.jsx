@@ -9,26 +9,26 @@ export default function Joke({
   onDislike,
 }) {
   const handleLike = () => {
-    onLike(id);
-  };
+    onLike(id)
+  }
 
   const handleDislike = () => {
-    onDislike(id);
-  };
+    onDislike(id)
+  }
 
-  const handleFavorite = () => {
-    onFavorite(id);
-  };
+  // const handleFavorite = () => {
+  //   onFavorite(id);
+  // };
 
   return (
     <div>
       <p>{text}</p>
       <p>likes: {likes}</p>
-      <p>Favorite:{favorite ? "yes" : "no"}</p>
+      {/* <p>Favorite:{favorite ? "yes" : "no"}</p> */}
       <button onClick={handleLike}>👍</button>
       <button onClick={handleDislike}>👎</button>
       <button onClick={() => onDelete(id)}>delete</button>
-      <button onClick={handleFavorite}>Favorite</button>
+      {/* <button onClick={handleFavorite}>Favorite</button> */}
     </div>
-  );
+  )
 }
